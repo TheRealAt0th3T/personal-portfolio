@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+/* Default CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: white !important;
+  font-family: sans-serif !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.headers {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
 }
 
-.App-link {
-  color: #61dafb;
+.main-logo {
+  width: 75%;
+  height: 75%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* NAVBAR */
+
+nav.navbar {
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition:  0.32s ease-in-out;
+}
+
+nav.navbar.scrolled {
+  padding: 0px 0;
+  background-color: #121212;
+}
+
+nav.navbar a.navbar-brand {
+    width: 10%;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  color: #fff !important;
+  letter-spacing: 1px;
+  padding: 0 25px;
+  font-size: 20px;
+  opacity: 0.75;
+}
+
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+    opacity: 1;
+}
+
+span.navbar-text {
+    display: flex;
+    align-items: center;
+}
+
+.socials-icon a {
+    width: 45px;
+    height: 45px;
+    background: rgba(217, 217, 217, 0.1);
+    display: inline-flex;
+    border-radius: 50%;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.socials-icon a::before {
+    content: "";
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: scale(0);
+	  transition: 0.3s ease-in-out;
+}
+.socials-icon a:hover::before {
+    transform: scale(1);
+}
+.socials-icon a img {
+	width: 25px;
+  z-index: 1;
+	transition: 0.3s ease-in-out;
+}
+
+.navbar-text button {
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 16px 35px;
+  font-size: 16px;
+  margin-left: 16px;
+	position: relative;
+	background-color: transparent;
+	transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.navbar-text button::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  top:0;
+  left: 0;
+  /* bottom: 0;
+  right: 0; */
+  z-index: -1;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+  /* transform: scaleX(0); */
+}
+.navbar-text button:hover {
+  color: #121212;
+}
+
+.navbar-text button:hover::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+  /* transform: scaleX(1); */
+}
+
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus {
+	outline: none;
+  box-shadow: none;
+}
+nav.navbar .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  top: -2px;
+}
+
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before {
+	width: 24px;
+	position: absolute;
+	height: 2px;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	content: '';
+}
+nav.navbar .navbar-toggler-icon:after {
+	top: 8px;
 }
