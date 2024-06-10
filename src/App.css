@@ -28,6 +28,7 @@ body {
 .main-logo {
   width: 75%;
   height: 75%;
+  border-radius: 50000px;
 }
 
 /* NAVBAR */
@@ -52,7 +53,7 @@ nav.navbar a.navbar-brand {
 nav.navbar .navbar-nav .nav-link.navbar-link {
   color: #fff !important;
   letter-spacing: 1px;
-  padding: 0 25px;
+  padding: 0 15px;
   font-size: 20px;
   opacity: 0.75;
 }
